@@ -10,34 +10,32 @@ body {
 }
 
 header {
-	
-		.site-logo {
-			background: #fff;
-			padding: 10px;
-			border-radius: 25px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			box-shadow: 0 9px 0px #ffffff94, 0px 0px 69px -5px powderblue;
-			margin-top: 1.5rem;
+	.site-logo {
+		background: #fff;
+		padding: 10px;
+		border-radius: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 9px 0px #ffffff94, 0px 0px 69px -5px powderblue;
+		margin-top: 1.5rem;
 
-			img {
-				border-right: 3px solid darkblue;
-				padding-right: 1rem;
-				margin-right: 1rem;
-				width: clamp(7rem,calc(6.4rem + 3vw),10rem);
-				height: auto;
-				padding-top: 9px;
-			}
-			p {
-				font-size: clamp(20px,calc(17px + 0.938vw),35px);
-				font-family: fangsong !important;
-				font-weight: 500 !important;
-				line-height: 1.2;
-				margin: 0 !important;
-			}
+		img {
+			border-right: 3px solid darkblue;
+			padding-right: 1rem;
+			margin-right: 1rem;
+			width: clamp(7rem, calc(6.4rem + 3vw), 10rem);
+			height: auto;
+			padding-top: 9px;
 		}
-	
+		p {
+			font-size: clamp(20px, calc(17px + 0.938vw), 35px);
+			font-family: fangsong !important;
+			font-weight: 500 !important;
+			line-height: 1.2;
+			margin: 0 !important;
+		}
+	}
 }
 
 .main-content {
@@ -53,11 +51,10 @@ header {
 			font-size: clamp(20px, calc(18px + 0.625vw), 30px);
 			line-height: clamp(1.3rem, calc(1.054rem + 1.052vw), 2rem);
 			margin: 0;
-			font-weight: 700;
+			font-weight: 600;
 			font-family: emoji;
 			margin-bottom: 0.8rem !important;
 			max-width: 60%;
-			/* text-shadow: 1px 1.5px 4px darkblue; */
 			color: rgba(6, 6, 54, 0.758);
 			span {
 				text-shadow: none !important;
@@ -105,6 +102,7 @@ header {
 			text-align: center;
 			font-weight: 700;
 			font-size: clamp(24px, calc(21.887px + 0.563vw), 30px);
+			margin-bottom: 1rem !important;
 		}
 
 		.calculation-mode-toggle {
@@ -191,17 +189,23 @@ header {
 				div {
 					display: flex;
 					align-items: center;
+					flex-wrap: wrap;
+					justify-content: center;
+					row-gap: 1rem;
 					border: 2px solid #00bfff63;
 					background: #1e90ff40;
 					border-radius: 0.8rem;
 					margin-top: 3rem;
 					padding: 10px 1rem 10px 3rem;
 					width: max-content;
-					max-width: 90vw;
+					max-width: 100%;
 					transition: all 0.5s ease-in-out;
 					margin: auto;
 					&:hover {
 						background: #1e8fff21;
+					}
+					p {
+						text-align: center;
 					}
 				}
 				p {
@@ -239,15 +243,6 @@ header {
 			#00008b6e,
 			darkblue
 		);
-		/* background: linear-gradient(
-			138deg,
-			#000,
-			skyblue,
-			#000,
-			skyblue,
-			#000,
-			skyblue
-		); */
 		color: transparent;
 		background-clip: text;
 	}
@@ -261,15 +256,7 @@ header {
 			darkblue,
 			#00008b6e
 		);
-		/* background: linear-gradient(
-			138deg,
-			skyblue,
-			#000,
-			skyblue,
-			#000,
-			skyblue,
-			#000
-		); */
+
 		color: transparent;
 		background-clip: text;
 	}
@@ -303,17 +290,8 @@ button.calculate-btn {
 	transition: all 0.2s ease-in-out;
 	transform-origin: bottom;
 	&:focus {
-		/* font-size: 14px; */
 		box-shadow: 0px 1px 0px #00008b63;
 	}
-}
-.error {
-	color: red;
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	margin: 0;
-	margin-top: 5px;
 }
 
 .features {
@@ -359,13 +337,57 @@ button.calculate-btn {
 	}
 }
 
-@media screen and (max-width: 991px) {
-	.site-logo{
-		flex-direction: column;
-		row-gap: 1.2rem;
-		img{
+footer {
+	padding: 1.5rem 1rem;
+	background: #fff;
+	.footer-content {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		row-gap: 1rem;
+		flex-wrap: wrap;
+		.site-logo {
+			img {
+				padding-right: 1rem;
+				margin-right: 1rem;
+				width: clamp(7rem, calc(6.4rem + 3vw), 10rem);
+				height: auto;
+				padding-top: 9px;
+			}
+		}
+		h2 {
+			text-align: center;
+			font-size: clamp(18px, calc(16.6px + 0.438vw), 25px);
+			font-family: emoji;
+			color: darkblue;
+			font-weight: 600;
 			margin: 0;
-			border:0 !important;
+			a {
+				text-decoration: none;
+				color: dodgerblue;
+			}
+		}
+		p {
+			font-size: clamp(18px, calc(17px + 0.313vw), 23px);
+			font-family: emoji;
+			color: darkblue;
+			font-weight: 600;
+			margin: 0 !important;
+			a {
+				text-decoration: none;
+				color: dodgerblue;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.site-logo {
+		flex-direction: column;
+		row-gap: 1rem;
+		img {
+			margin: 0;
+			border: 0 !important;
 		}
 	}
 	.features {
@@ -379,5 +401,10 @@ button.calculate-btn {
 			max-width: 100% !important;
 			margin: auto;
 		}
+	}
+	.footer-content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 }
