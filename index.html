@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clampify | Responsive Design Made Easy </title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="root">
+    <div id="particles-js" style="width: 100vw;height: 100vh;position: fixed;top: 0;left: 0;z-index: -1;"></div>
+
+    <header>
+      <div class="container">
+        <div class="site-logo">
+          <img src="images/logo.png"> <p>Responsive Design Made Easy</p>
+        </div>
+      </div>
+    </header>
+
+
+    <main class="clampify-main-content">
+      <div class="container">
+        <div class="main-content">
+          <section class="banner">
+            <h2 class="banner-text">Generate perfect CSS clamp code for fluid responsive fonts, padding, widths, and
+              many
+              more.</h2>
+            <p>Magically make your designs fully responsive <span style="color: red;">&#10084;</span></p>
+
+          </section>
+          
+          <section class="features">
+            <div class="container">
+              <div class="wrapper d-flex">
+               
+                <div class="text-content">
+                  <h3>
+                    From <span>typography</span> to <span>layout</span> — fluid, fast, and flawless. <span> &#x26A1;</span>
+                  </h3>
+                  <p>CSS clamp is a magic for responsive web designing. Using clamp, you can add responsive font-size, line-height, height, width, margin, padding and many more to website elements that can adapt to any screen  without writing
+                    multiple media queries for the same result.</p>
+                  <p><b>With clampify,</b> you can generate magical code of clamp( ).
+                   One tool for complete responsive solution.
+                  </p>
+
+                </div>
+                 <div class="image-wrapper">
+                  <img src="images/responsive.png" alt="poster">
+                </div>
+              </div>
+              
+            </div>
+          </section>
+
+
+          <div class="clamp-calculation-section">
+            <h2>Generate your Clamp code</h2>
+            <div class="calculation-mode-toggle">
+              <button class="default-mode-btn active">From Desktop to Mobile</button>
+              <button class="custom-mode-btn">For Custom Range of Device Width</button>
+            </div>
+            <div class="form-body">
+              <form class="clamp-calculate" method="post">
+                <div class="form-item form-unit">
+                  <label for="max-value">Unit</label>
+                  <select name="unit" id="unit">
+                    <option value="px">px</option>
+                    <option value="rem">rem</option>
+                  </select>
+                  <p class="description">Choose a unit for your sizes.</p>
+                  
+                </div>
+                <fieldset id="min-max-viewport-input" class="d-none">
+                  <div class="form-item form-min-viewport-width">
+                    <label for="min-vw">Minimum Viewport Width</label>
+                    <input type="number" id="min-vw" name="min_vw">
+                    <p class="description">Smallest screen width you want scaling to start from. (in px)</p>
+                  </div>
+
+                  <div class="form-item form-max-viewport-width">
+                    <label for="max-vw">Maximum Viewport Width</label>
+                    <input type="number" id="max-vw" name="max_vw">
+                    <p class="description">Largest screen width you want scaling to stop at. (in px)</p>
+                  </div>
+                </fieldset>
+
+                <fieldset id="min-max-value-input">
+                  <div class="form-item form-max-value">
+                    <label for="max-value">Maximum size (In <span>px</span>)</label>
+                    <input type="number" id="max-value" name="max_value">
+                    <p class="description">Largest value your element should grow to.</p>
+                  </div>
+                  <div class="form-item form-min-value">
+                    <label for="min-value">Minimum size (In <span>px</span>)</label>
+                    <input type="number" id="min-value" name="min_value">
+                    <p class="description">Smallest value your element should shrink to.</p>
+                  </div>
+                </fieldset>
+
+                <div id="form-action">
+                  <button type="submit" class="calculate-btn action-btn">Generate Clamp Code</button>
+                  <button class="reset action-btn">Reset</button>
+                </div>
+
+                <div class="output-wrapper d-none">
+                  <h2>Output</h2>
+                  <div>
+                    <p></p>
+                    <button>Copy</button>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
